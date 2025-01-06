@@ -5,6 +5,13 @@ body {
     overflow: hidden;
 }
 
+.burger {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    width: 45px;
+    height: auto;
+}
 
 .linee {
     height: 20px;
@@ -19,13 +26,20 @@ nav {
 
 }
 
-#listof {
+.listof {
     display: flex;
     list-style: none;
     margin-top: -22px;
     margin-left: 20px;
     font-size: 18px;
     font-weight: bold;
+    min-width: 0;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    left: 100%;
 }
 
 .item {
@@ -65,6 +79,18 @@ main {
     position: relative;
     top: -7px;
     margin-left: 10px;
+}
+
+.blur {
+    position: absolute;
+    top: 90px;
+    left: 870px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    filter: blur(100px);
+    opacity: 10%;
 }
 
 .character_name {
@@ -155,6 +181,7 @@ h3 {
     color: white;
 }
 
+
 .two {
     width: 117x;
     height: 42px;
@@ -208,7 +235,7 @@ h3 {
     color: #00137e;
 }
 
-.strr{
+.strr {
     position: relative;
     color: #0E005D;
     font-size: 13px;
@@ -216,7 +243,7 @@ h3 {
     top: 45px;
 }
 
-.zhong{
+.zhong {
     left: 130px;
     color: yellow;
 }
@@ -314,4 +341,34 @@ h3 {
     position: absolute;
     left: -55px;
     rotate: 6deg;
+}
+
+footer {
+    color: gray;
+}
+
+#menuButton.shake {
+    animation: shake 1s ease;
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    body{
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
 }
